@@ -2,8 +2,8 @@
 //  BackLayer.m
 //  popView
 //
-//  Created by 李军杰 on 16/9/15.
-//  Copyright © 2016年 李军杰. All rights reserved.
+//  Created by BackNotGod on 16/9/15.
+//  Copyright © 2016年 BackNotGod. All rights reserved.
 //
 
 #import "BackLayer.h"
