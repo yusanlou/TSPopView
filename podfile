@@ -1,0 +1,5 @@
+target 'popView' do
+	pod 'Masonry', '~> 1.0.1'
+	pod 'pop', '~> 1.0'
+ 	platform :ios, '7.1'
+end
