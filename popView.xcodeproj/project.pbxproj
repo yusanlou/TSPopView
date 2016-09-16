@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -248,8 +248,9 @@
 		C4C5E9ED1D8A6B2C00324AF5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = BackNotGod;
 				LastUpgradeCheck = 0730;
-				ORGANIZATIONNAME = "李军杰";
+				ORGANIZATIONNAME = BackNotGod;
 				TargetAttributes = {
 					C4C5E9F41D8A6B2C00324AF5 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -265,7 +266,7 @@
 				};
 			};
 			buildConfigurationList = C4C5E9F01D8A6B2C00324AF5 /* Build configuration list for PBXProject "popView" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
