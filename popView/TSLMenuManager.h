@@ -42,4 +42,11 @@ typedef NS_ENUM (NSUInteger,TSPOPOPTION){
 +(void)showMenuWith:(UIView*)view delegate:(id)target originPoint:(CGPoint)originPoint  cornerPoint:(CGPoint)point size:(CGSize)size option:(TSPOPOPTION)option;
 
 
+
++(void)showMenuWith:(UIView *)view delegate:(id)target originPoint:(CGPoint)originPoint size:(CGSize)size option:(TSPOPOPTION)option;
+
++(void)showMenudelegate:(id)target originPoint:(CGPoint)originPoint size:(CGSize)size option:(TSPOPOPTION)option;
+
++(void)showdelegate:(id)target originPoint:(CGPoint)originPoint cornerPoint:(CGPoint)point size:(CGSize)size option:(TSPOPOPTION)option;
+
 @end

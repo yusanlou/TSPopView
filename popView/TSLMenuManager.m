@@ -13,6 +13,17 @@
 
 @implementation TSLMenuManager
 
++(void)showMenuWith:(UIView *)view delegate:(id)target originPoint:(CGPoint)originPoint size:(CGSize)size option:(TSPOPOPTION)option{
+    [TSLMenuManager showMenuWith:view delegate:target originPoint:originPoint cornerPoint:CGPointZero size:size option:option];
+}
+
++(void)showMenudelegate:(id)target originPoint:(CGPoint)originPoint size:(CGSize)size option:(TSPOPOPTION)option{
+    [TSLMenuManager showMenuWith:[[UIApplication sharedApplication] keyWindow] delegate:target originPoint:originPoint size:size option:option];
+}
+
++(void)showdelegate:(id)target originPoint:(CGPoint)originPoint cornerPoint:(CGPoint)point size:(CGSize)size option:(TSPOPOPTION)option{
+    [TSLMenuManager showMenuWith:[[UIApplication sharedApplication] keyWindow] delegate:target originPoint:originPoint cornerPoint:CGPointZero size:size option:option];
+}
 
 
 
