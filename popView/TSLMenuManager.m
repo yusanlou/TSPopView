@@ -8,7 +8,6 @@
 
 #import "TSLMenuManager.h"
 #import "TSLMenuView.h"
-#import <pop/POP.h>
 #import "BackLayer.h"
 
 @implementation TSLMenuManager
@@ -43,17 +42,15 @@
     menu.dataSource = target;
     menu.mask = mask;
     [view addSubview:menu];
-
-    POPSpringAnimation* anim_a = [POPSpringAnimation animationWithPropertyNamed:kPOPViewAlpha];
     
-    anim_a.fromValue = @(0.0);
-    anim_a.toValue = @(1.0);
-    anim_a.springSpeed = 18;
-    [menu pop_addAnimation:anim_a forKey:@"alpha_anim"];
+    [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        menu.alpha = 1.0;
+    } completion:^(BOOL finished) {
+        
+    }];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:menu action:@selector(removeFromSuperview)];
     [mask addGestureRecognizer:tap];
-
 
 }
 

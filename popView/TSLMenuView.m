@@ -9,7 +9,7 @@
 #import "TSLMenuView.h"
 #import "BackLayer.h"
 #import <Masonry.h>
-#import <pop/POP.h>
+
 
 
 @interface TSLMenuView ()
@@ -100,17 +100,14 @@
    
     self.layer.position = CGPointMake(self.frame.origin.x + _layer.cornerPoint.x, self.frame.origin.y);
     self.layer.anchorPoint = CGPointMake(_layer.cornerPoint.x/self.bounds.size.width, 0);
-    POPSpringAnimation* anim_a = [POPSpringAnimation animationWithPropertyNamed:kPOPViewScaleXY];
-
-    anim_a.toValue = [NSValue valueWithCGPoint:CGPointMake(0, 0)];
-    anim_a.springSpeed = 18;
-    [self pop_addAnimation:anim_a forKey:@"scal_rm"];
+    
     DEF_WEAKSELF
-    [anim_a setCompletionBlock:^(POPAnimation *anim, BOOL finish) {
-        if (finish) {
-            [weakSelf.mask removeFromSuperview];
-            [super removeFromSuperview];
-        }
+    [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        self.alpha = 0.0;
+        self.transform = CGAffineTransformMakeScale(0.6, 0.6);
+    } completion:^(BOOL finished) {
+        [weakSelf.mask removeFromSuperview];
+        [super removeFromSuperview];
     }];
 
 }
